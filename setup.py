@@ -1,16 +1,7 @@
-# -*- coding: utf-8 -*-
 from setuptools import setup, find_packages
 
-# from pip.req import parse_requirements
-import re, ast
+from propms import __version__ as version
 
-# get version from __version__ variable in propms/__init__.py
-_version_re = re.compile(r"__version__\s+=\s+(.*)")
-
-with open("propms/__init__.py", "rb") as f:
-    version = str(
-        ast.literal_eval(_version_re.search(f.read().decode("utf-8")).group(1))
-    )
 
 with open("requirements.txt") as f:
     install_requires = f.read().strip().split("\n")
