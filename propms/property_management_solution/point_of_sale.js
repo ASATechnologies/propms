@@ -11,14 +11,14 @@ try {
 		}
 		make() {
 			this.make_dom();
-			console.log("AakvaERP POS making cost center field")
+
 			this.make_cost_center_field();
 			this.make_customer_field();
 			this.make_loyalty_points();
 			this.make_numpad();
 		}
 		make_cost_center_field() {
-			// console.log("AakvaERP POS making cost center field")
+
 			this.cost_center_field = frappe.ui.form.make_control({
 				df: {
 					fieldtype: 'Link',
